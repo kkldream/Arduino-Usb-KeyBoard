@@ -9,7 +9,7 @@
 * USB連接線 x1 (一端是USB口，另一端是電線)
 * 3.6V 稽納二極體 x2 (建議選用功耗0.25~0.5w的)
 ### 設定腳位：
-in libraries\UsbKeyboard\\[usbconfig.h](libraries\UsbKeyboard\usbconfig.h)：
+in /libraries/UsbKeyboard/[usbconfig.h](libraries/UsbKeyboard/usbconfig.h)：
 |參數|Arduino|<--->|USB|
 |:---:|:---:|:---:|:---:|
 |USB_CFG_DPLUS_BIT|D2|68Ω|D+|
@@ -23,7 +23,7 @@ in libraries\UsbKeyboard\\[usbconfig.h](libraries\UsbKeyboard\usbconfig.h)：
 4. D+和D-上的3.6V穩壓二極管D1和D2起到限制數據線上的電平的作用。因爲在USB規範中規定數據線D+和D-上的電平範圍是3.0V至3.6V，而AVR單片機的輸出電平是Vcc。如果單片機的Vcc是5V，在沒有D1和D2的情況下將造成電平不匹配，會造成在很多計算機中無法正確識別出USB設備。如果用戶系統的Vcc在3.0V至3.6V之間，就可以省略這兩個穩壓二極管。從這裏也可以看出用戶系統的Vcc必須高於3V。
 ### 程式
 只需修改以下：
-in UsbKeyboard\\[UsbKeyboard.ino](UsbKeyboard\UsbKeyboard.ino)：
+in /UsbKeyboard/[UsbKeyboard.ino](UsbKeyboard/UsbKeyboard.ino)：
 ```c++
 // 按鍵數量
 #define KeyNum 11
@@ -39,7 +39,7 @@ bool keyDown(byte key)      //發送按下狀態的鍵值
 bool keyUp(byte key)        //發送放開狀態的鍵值
 ```
 ### 模擬鍵值
-in libraries\UsbKeyboard\\[UsbKeyboard.h](libraries\UsbKeyboard\UsbKeyboard.h)：
+in /libraries/UsbKeyboard/[UsbKeyboard.h](libraries/UsbKeyboard/UsbKeyboard.h)：
 ```c++
 #define MOD_CONTROL_LEFT    0xE0
 #define MOD_SHIFT_LEFT      0xE1
