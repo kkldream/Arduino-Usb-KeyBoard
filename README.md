@@ -34,9 +34,9 @@ const byte KeyCode[KeyNum] = {KEY_D, KEY_F, KEY_J, KEY_K, KEY_G, KEY_H, KEY_B, K
 ```
 主要函式：
 ```c++
-bool keyStroke(byte key)    //發送一個鍵值
-bool keyDown(byte key)      //發送按下狀態的鍵值
-bool keyUp(byte key)        //發送放開狀態的鍵值
+bool keyStroke(byte key);   //發送一個鍵值
+bool keyDown(byte key);     //發送按下狀態的鍵值
+bool keyUp(byte key);       //發送放開狀態的鍵值
 ```
 ## 模擬鍵值：
 in /libraries/UsbKeyboard/[UsbKeyboard.h](libraries/UsbKeyboard/UsbKeyboard.h)：
