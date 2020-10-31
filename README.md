@@ -1,5 +1,5 @@
 # Arduino-Usb-KeyBoard
-透過Arduino模擬鍵盤接口，免驅動，最多同時6鍵按壓。
+透過Arduino模擬鍵盤接口，免驅動，修改原本函式庫後，最多可同時6鍵按壓。
 ## 環境：
 * [Arduino IDE 1.0.6](arduino-1.0.6-windows.zip) (高版本編譯會失敗)
 * Atmega328p (Uno、Nano、Pro mini)，其他未試過
